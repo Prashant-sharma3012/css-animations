@@ -165,6 +165,17 @@
     animation: pulse 5s infinite;
   }
 
+  /* Animation */
+  div#l{
+    animation: smooth 4s infinite;
+    animation-timing-function: ease;
+  }
+
+    /* Animation */
+  div#m{
+    animation: smooth 4s ease infinite, move 4s linear infinite;
+  }
+
   @keyframes pulse {
     0%, 20% {
       background-color: rgb(106, 168, 230);
@@ -183,4 +194,36 @@
     }
   }
 
-  
+  @keyframes smooth {
+    0%, 33% {
+      transform: scale(1);
+      border-radius: 40%;
+      background-color: rgb(106, 168, 230);
+    }
+    33%, 66% {
+      transform: scale(2);
+      border-radius: 80%;
+      background-color: rgb(192, 67, 36);
+    }
+    66%, 100% {
+      transform: scale(1);
+      border-radius: 40%;
+      background-color: rgb(28, 153, 101);
+    }
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(0px, 0px);
+      background-color: rgb(106, 168, 230);
+    }
+    50% {
+      transform: translate(40px, 40px);
+      background-color: rgb(192, 67, 36);
+    }
+    50% {
+      transform: translate(80px, 80px);
+      background-color: rgb(192, 67, 36);
+    }
+  }
+

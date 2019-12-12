@@ -1,0 +1,106 @@
+#main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100vh;
+  width: auto;
+  padding: 3rem;
+}
+
+  div :not(#main){
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    background-color: black;
+  }
+
+  /* transition works by telling it the property name you want to transition, here i used background color that will take 1s to change */
+  /* transition - property-name duration function delay */
+  div#a{
+    transition: background-color 1s ease;
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -o-transition: background-color 1s ease;
+    background-color: red; 
+  }
+
+    div#a:hover{
+      background-color: green; 
+    }
+
+  /* to use transition on more than one or all props use keyword all */
+  div#b{
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    background-color: black; 
+  }
+
+    div#b:hover{
+      background-color: red;
+      width: 6rem;
+      height: 6rem;
+    }
+
+    /* example for transition function */
+  div#c{
+    -webkit-transition-timing-function: steps(4, start);
+    -moz-transition-timing-function: steps(4, start);
+    -o-transition-timing-function: steps(4, start);
+    transition-timing-function: steps(4, start);
+
+    -webkit-transition-duration: 3s;
+    -moz-transition-duration: 3s;
+    -o-transition-duration: 3s;
+    transition-duration: 3s;
+
+    -webkit-transition-property: background-color;
+    -moz-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+  }
+
+    div#c:hover{
+      background-color: lightblue;
+      cursor: pointer;
+    }
+
+  /* to use transition on more than one or all props use keyword all */
+  div#d{
+    transition: transform 1s ease;
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
+    background-color: lightblue; 
+  }
+
+    div#d:hover{
+      transform: scale(5);
+    }
+
+  /* Skew */
+  div#e{
+    transition: transform 1s ease;
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
+    background-color: lightblue; 
+  }
+
+    div#e:hover{
+      transform: skewY(25deg);
+    }
+
+  /* Skew */
+  div#f{
+    transition: transform 1s ease;
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
+    background-color: lightsalmon; 
+  }
+
+    div#f:hover{
+      transform: rotate(360deg);
+    }
